@@ -1,18 +1,26 @@
-# React + Vite
+# AI Study Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI Study Assistant is a web application designed to help students with learning tasks using AI-powered responses.
 
-Currently, two official plugins are available:
+The application allows users to ask study-related questions and receive helpful explanations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+* Ask study questions
+* AI-generated answers
+* Simple and clean UI
+* Input validation
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
+* React
+* JavaScript
+* AI API integration
+* CSS
 
-## Expanding the ESLint configuration
+## Future Improvements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Subject categorization
+* File uploads (PDF / notes)
+* Flashcard generation
+* Study history
