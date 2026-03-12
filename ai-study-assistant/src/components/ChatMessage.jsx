@@ -1,32 +1,4 @@
-// import { motion } from "framer-motion";
 
-// const ChatMessage = ({ message }) => {
-//   const isUser = message.role === "user";
-
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 15 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       className={`flex ${isUser ? "justify-end" : "justify-start"}`}
-//     >
-//       <div
-//         className={`max-w-xl px-4 py-3 rounded-2xl shadow ${
-//           isUser
-//             ? "bg-cyan-500 text-black"
-//             : "bg-slate-800 border border-slate-700 text-white"
-//         }`}
-//       >
-//         {isUser ? (
-//            message.content
-//         ) : (
-//            <TypingText text={message.content} />
-//         )}
-//       </div>
-//     </motion.div>
-//   );
-// };
-
-// export default ChatMessage;
 import { motion } from "framer-motion";
 import { Copy } from "lucide-react";
 import TypingText from "./TypingText";
@@ -50,7 +22,7 @@ const ChatMessage = ({ message }) => {
             : "bg-slate-800/70 border border-slate-700 backdrop-blur-md text-white"
         }`}
       >
-        {/* MESSAGE CONTENT */}
+    
         {isUser ? (
           message.content
         ) : (
@@ -61,7 +33,7 @@ const ChatMessage = ({ message }) => {
           </div>
         )}
 
-        {/* COPY BUTTON (AI ONLY) */}
+       
         {!isUser && (
           <button
             onClick={() =>
@@ -73,7 +45,7 @@ const ChatMessage = ({ message }) => {
           </button>
         )}
 
-        {/* TIMESTAMP */}
+      
         <div className="text-xs opacity-50 mt-2">
           {message.time}
         </div>
