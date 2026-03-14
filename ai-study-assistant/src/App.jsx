@@ -5,7 +5,7 @@ import Loader from "./components/Loader";
 
 
 function App() {
-  // 🔥 Load chats from localStorage
+  //  Load chats from localStorage
   const [chats, setChats] = useState(() => {
     const saved = localStorage.getItem("ai-chats");
     return saved
@@ -19,7 +19,7 @@ function App() {
         ];
   });
 
-  // 🔥 Load active chat id safely
+  // Load active chat id safely
   const [activeChatId, setActiveChatId] = useState(() => {
     const saved = localStorage.getItem("ai-active-chat");
     return saved ? JSON.parse(saved) : 1;
@@ -30,22 +30,22 @@ function App() {
 
   const activeChat = chats.find((chat) => chat.id === activeChatId);
 
-  // ✅ Auto Scroll
+  // Auto Scroll
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [activeChat?.messages, loading]);
 
-  // ✅ Save chats
+  //  Save chats
   useEffect(() => {
     localStorage.setItem("ai-chats", JSON.stringify(chats));
   }, [chats]);
 
-  // ✅ Save active chat
+  //  Save active chat
   useEffect(() => {
     localStorage.setItem("ai-active-chat", JSON.stringify(activeChatId));
   }, [activeChatId]);
 
-  // 🔥 Rename Chat
+  //  Rename Chat
   const renameChat = (id) => {
     const newTitle = prompt("Enter new chat title:");
     if (!newTitle) return;
@@ -57,7 +57,7 @@ function App() {
     );
   };
 
-  // 🔥 Delete Chat (Safe)
+  //  Delete Chat (Safe)
   const deleteChat = (id) => {
     const filtered = chats.filter((chat) => chat.id !== id);
 
@@ -77,7 +77,7 @@ function App() {
     }
   };
 
-  // 🔥 Send Message
+  //  Send Message
   const handleSend = async (topic) => {
     if (!topic.trim()) return;
 
@@ -142,7 +142,7 @@ const aiReply = data.reply;
   return (
     <div className="h-screen flex bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white">
       
-      {/* 🔥 SIDEBAR */}
+      {/* SIDEBAR */}
       <div className="w-64 border-r border-slate-800 p-4 flex flex-col">
         <button
           onClick={() => {
@@ -188,7 +188,7 @@ const aiReply = data.reply;
         </div>
       </div>
 
-      {/* 🔥 MAIN CHAT AREA */}
+      {/* MAIN CHAT AREA */}
       <div className="flex-1 flex flex-col">
         
         <div className="p-5 text-xl font-bold border-b border-slate-800">
